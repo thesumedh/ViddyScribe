@@ -1,0 +1,237 @@
+/* SaaS Dashboard Layout Styles */
+.dashboardLayout {
+    display: flex;
+    height: 100vh;
+    background: #030014;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 260px;
+    background: #0a041f;
+    border-right: 1px solid rgba(139, 92, 246, 0.15);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebarHeader {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid #1e2130;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    background: linear-gradient(to right, #A855F7, #EC4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebarNav {
+    flex: 1;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.navItem svg {
+    color: #64748b;
+    transition: color 0.2s ease;
+}
+
+.navItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f8fafc;
+}
+
+.navItem:hover svg {
+    color: #c4b5fd;
+}
+
+.activeNavItem {
+    background: rgba(139, 92, 246, 0.1);
+    color: #f8fafc;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.activeNavItem svg {
+    color: #a855f7;
+}
+
+.sidebarFooter {
+    padding: 24px 16px;
+    border-top: 1px solid #1e2130;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userInfo strong {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.userInfo span {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Main Content Area */
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Background glow for workspace */
+.mainContent::before {
+    content: '';
+    position: fixed;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: rgba(139, 92, 246, 0.08);
+    filter: blur(150px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contentHeader {
+    height: 72px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    position: relative;
+    z-index: 10;
+    background: rgba(3, 0, 20, 0.6);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+}
+
+.contentHeader h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.workspace {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Upload & Processing Overrides */
+.uploadSection {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.headerText {
+    text-align: center;
+    max-width: 600px;
+}
+
+.headerText h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.headerText p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.processingSection {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.srtUploaderWrap {
+    margin-top: 24px;
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.srtHint {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+}
+
+.uploadGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    width: 100%;
+    margin-top: 16px;
+}
