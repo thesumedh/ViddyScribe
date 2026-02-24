@@ -1,6 +1,6 @@
-# ViddyScribe - AI Video Accessibility
+# Vidbuddy - AI Video Accessibility
 
-ViddyScribe is a premium web application that automatically generates contextual audio descriptions for visual scenes in videos, making digital media natively accessible to blind and visually impaired audiences.
+Vidbuddy is a premium web application that automatically generates contextual audio descriptions for visual scenes in videos, making digital media natively accessible to blind and visually impaired audiences.
 
 This project was built to showcase the power of AI in solving real-world accessibility issues, drawing inspiration from award-winning accessibility solutions while leveraging the cutting-edge **Google Gemini 2.0 Flash Multimodal API**.
 
